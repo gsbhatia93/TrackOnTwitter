@@ -1,0 +1,30 @@
+<html>
+  <body style="min-width:300px">
+    <form id="handleForm" onsubmit="return saveHandle()">
+      <input type="text" id='newHandle'name="newHandle" placeholder="new handle">
+      <input type="text" id='newKeyword'name="newKeyword" placeholder="new keyword">
+      <input type="submit" id="save" value="save new handle" >
+    </form>
+
+    <!--button id="newtab">newtab</button-->
+
+    <p id="haveHandle" > fetching </p>
+  <div id='displayHandles'>
+    <table>
+      <tr>
+        <td>handles:</td>
+        <td id="td1"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>keywords:</td>
+        <td id="td2"></td>
+      </tr>
+    </table>
+    <p id='backgroundMessage'></p>
+  </div>
+
+    <script src="life.js"></script>
+  </body>
+</html>

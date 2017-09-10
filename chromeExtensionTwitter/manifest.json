@@ -1,0 +1,33 @@
+{
+      "manifest_version" : 2,
+      "name" : "chromeExtensionTwitter",
+      "version":"0.1",
+      "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["jquery-3.2.1.min.js","content.js"]
+        }
+      ],
+      "browser_action":{
+        "default_icon":"icon.png",
+        "default_title": " ur feed"
+      },
+      "background" : {
+        "scripts" : [
+            "codebird.js",
+          "jquery-3.2.1.min.js",
+            "bg1.js"
+        ]
+      },
+      "permissions": [
+        "notifications",
+        "storage",
+        "background",
+        "tabs",
+        "https://api.twitter.com/*",
+        "http://*/"
+      ]
+}
+//context menu only avaialble in bg.js

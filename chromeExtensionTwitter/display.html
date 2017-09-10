@@ -1,0 +1,24 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body onload="getData()">
+
+<h1>display</h1>
+
+
+<script type="text/javascript">
+  function getData(){
+    chrome.storage.sync.get(["Handles"], function(items){
+      document.getElementById("display").value = items;
+    });
+  }
+</script>
+
+<p> display handles</p>
+<input type="hidden" id='display' value=''>
+
+</body>
+</html>
