@@ -15,7 +15,7 @@ recieved as POST request parameters. Hence in each cycle parameters are updated 
 notifications. The notifications are clickable opening the twitter url of tweet in a new tab.By clicking on the extension icon 
 you can view and update fields.
 <h5>Tweet in new tab</h5>
-![Alt text](/2.png?raw=true "open notification in new tab") 
+![Alt text](/5.png?raw=true ) 
 <h5>Sending XMLHttpRequest </h5>
 Create a new XMLHttpRequest and send to server requesting new tweets. 
 ```
