@@ -6,7 +6,7 @@ This app could help keep updated with Twitter in real time wihtout having to log
 containing tweets user might not be following. Further extension could involve passing this stream to data mining application as this
 could serve as valuable data source removing all noise for stable data sets.
  ![Alt text](/notification.png?raw=true "notification and fields")
-  
+ <h4>Backend Server</h4> 
 The backend is served using Nodejs server.This server connects to the Twitter Streaming API. The server recieves the 
 'handles' and 'keywords' from our Chrome Extension. It request the Twitter Api, filtering bases in our preference.
 These preferences can be input into the app by clicking the extension icon and entering fields of choosing.
