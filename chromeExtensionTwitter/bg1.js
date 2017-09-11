@@ -91,7 +91,7 @@ chrome.runtime.onMessage.addListener(
   }
 );
 
-
+setInterval(getNewTweets,9000);
 function getNewTweets(){
   var xhr = new XMLHttpRequest();
   var url = 'http://localhost:3000'
@@ -131,7 +131,7 @@ function getNewTweets(){
     }
   }
 }
-setInterval(getNewTweets,9000);
+
 
 
 
