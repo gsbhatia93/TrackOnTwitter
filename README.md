@@ -70,8 +70,10 @@ client.get('users/lookup',{screen_name:sn},
   ```
 Chrome storage is better than locale.storage as it provides sync across chrome account helping transfering fields you have saved.
 <hr>
-Node setup
+<h4>Node setup</h4>
+<br>
 Required : twitter package
+<br>
 command  : npm install twitter --save
 
 To start the server go to root directory containing app.js : node app.js
