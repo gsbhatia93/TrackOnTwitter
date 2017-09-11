@@ -6,7 +6,6 @@ This app could help keep updated with Twitter in real time wihtout having to log
 containing tweets user might not be following. Further extension could involve passing this stream to data mining application as this
 could serve as valuable data source removing all noise for stable data sets.<br>
  ![Alt text](/notification.png?raw=true "notification and fields")
- <h4>Backend Server</h4> 
 The backend is served using Nodejs server.This server connects to the Twitter Streaming API. The server recieves the 
 'handles' and 'keywords' from our Chrome Extension. It request the Twitter Api, filtering bases in our preference.
 These preferences can be input into the app by clicking the extension icon and entering fields of choosing.<br>
@@ -14,9 +13,7 @@ NodeJs http server responds to XMLHttpRequest from the extension background.js a
 recieved as POST request parameters. Hence in each cycle parameters are updated if they need to be updated and new tweets are sent as 
 notifications. The notifications are clickable opening the twitter url of tweet in a new tab.By clicking on the extension icon 
 you can view and update fields.
-<h5>Tweet in new tab</h5>
-![Alt text](/5.png?raw=true ) 
-<h5>Sending XMLHttpRequest </h5>
+![Alt text](/2.png?raw=true )
 Create a new XMLHttpRequest and send to server requesting new tweets. 
 ```
 setInterval(getNewTweets,3000);
