@@ -10,10 +10,10 @@ var haveId=[];
 var followId=[];
 //375238248
 var client = new Twitter({
-    consumer_key : "8ooBn00FUdiNE0FAmgWhBwfuU",
-    consumer_secret : "YFlX8EokGjES8Z1fwDu6Spt8KxXXI0eGCRzuD2VD301CZNidN5",
-    access_token_key : "375238248-g8W01qhagZ1dyjdxiwj8ZJ6q7LhkAZOtlcoH01qC",
-    access_token_secret : "tr3Erq3eyE1C35s5Dh0wgNspPvVM8X557flZdmePIhTuZ"
+    consumer_key : "hF9AQP0xYqoLCXX90Z0Bl9eeA",
+    consumer_secret : "KgwwDYONaI0rlwyzcgSvMtJsQJY7GvP4ZK7PTVsETXEkR4NvW1",
+    access_token_key : "375238248-mZnJaKMV7HGoB1KG9ZVU8YYqY5VkIUs505SjAeeQ",
+    access_token_secret : "6rYuRcjYtMqQZZsr0l9pthlT4giOKWRg4lSqhzkBttJ2n"
   });
 api();
   //var response=undefined;
