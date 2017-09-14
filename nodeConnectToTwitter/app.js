@@ -111,6 +111,10 @@ function getIdFromTwitter(sn){
 
   client.get('users/lookup',{screen_name:sn},
   function(err,tweet,response){
+    if(err){
+      return ;
+    }
+
     var id  = tweet[0].id_str
     followId.push(id);
     haveId.push(sn);
