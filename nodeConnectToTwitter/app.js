@@ -4,7 +4,7 @@ var fs = require('fs');
 var json=[];
 var qs = require('querystring');
 var track=''; // keywords
-var follow=[]; // handles have to be passed to ids
+var follow= []; // handles have to be passed to ids
 var haveId=[];
 
 var followId=[];
@@ -26,14 +26,20 @@ var server = http.createServer(function(req,response){
            });
            req.on('end',function(){
                var POST =  qs.parse(body);
+               console.log(typeof POST.handle)
                if(typeof POST.handle === 'string'){
-                 follow.push(POST.handle)
+                 console.log("follow:"+follow);
+                 if(follow.includes(POST.handle) === false){
+                    follow.push(POST.handle)
+                  }
+                 //follow.add(POST.handle);
                }
-               else{
+               if(typeof POST.handle === 'object'){
+                 console.log("follow_object:"+follow)
                  follow = POST.handle;
                }
                if(POST.keyword !== undefined){
-                 console.log('setting up track-----');
+                 //console.log('setting up track-----');
                  track = POST.keyword;
                }
 
@@ -74,9 +80,9 @@ function sendres(response){
 
 function api(){
 
-  console.log('twitter api-----'+ typeof track);
+  //console.log('twitter api-----'+ typeof track);
   if(track !== '' || followId.length>0){
-      console.log('twitter api--- values--'+  followId);
+      //console.log('twitter api--- values--'+  followId);
         client.stream('statuses/filter',{
               track:track.toString(),
               follow:followId.toString()
