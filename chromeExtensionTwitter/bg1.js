@@ -91,10 +91,11 @@ chrome.runtime.onMessage.addListener(
   }
 );
 
-setInterval(getNewTweets,9000);
+setInterval(getNewTweets,5000);
 function getNewTweets(){
   var xhr = new XMLHttpRequest();
   var url = 'http://localhost:3000'
+  //var url = 'https://trackontwitter.herokuapp.com';
   xhr.open('POST',url,true);
   xhr.onreadystatechange = handleStateChange;
   xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -115,14 +116,15 @@ function getNewTweets(){
   function handleStateChange(){
     if (xhr.readyState == 4) {
       // JSON.parse does not evaluate the attacker's scripts.
-      console.log(typeof xhr.responseText);
+      //console.log(typeof xhr.responseText);
       var r  = JSON.parse(xhr.responseText)
 
       if(r.response.length>0){
-        console.log(r.response[0]);
-        for(i=1;i<r.response.length;i++){
+        console.log(r.response);
+        for(i=0;i<r.response.length;i++){
           console.log(r.response[i].id);
-          showNotification(r.response[i])
+          var time = 1000*i;
+          setTimeout(showNotification(r.response[i]),1000*i);
         }
       }
       else{
